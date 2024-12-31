@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparna Tiwari | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #03162e;
+            color: #ededed;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        header .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00abf0;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ededed;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #00abf0;
+            color: #03162e;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #00abf0;
+            color: #03162e;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background-color: #ededed;
+        }
+		.projects h2{
+		color:#00abf0;
+		
+		}
+		
+        .skills, .projects, .contact {
+            padding: 50px 20px;
+        }
+        .skills h2, .projects h2, .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        .skills .grid, .projects .grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .skills .card, .projects .card {
+            padding: 20px;
+            background: #081b29;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .card img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ededed;
+            background: #081b29;
+            color: #ededed;
+        }
+        form button {
+            background: #00abf0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        form button:hover {
+            background: #ededed;
+            color: #03162e;
+        }
+		.experience {
+    padding: 50px 20px;
+    background: #03162e;
+}
+
+.experience h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #00abf0;
+}
+
+.experience .card {
+    display: flex;
+    gap: 20px;
+    background: #081b29;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.experience .card:hover {
+    transform: translateY(-5px);
+}
+
+.experience .card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    padding: 5px;
+}
+
+.experience .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.experience .card-content h3 {
+    font-size: 1.5rem;
+    color: #00abf0;
+}
+
+.experience .card-content p {
+    font-size: 1rem;
+    color: #b0c4de;
+    line-height: 1.6;
+}
+.services {
+    padding: 50px 20px;
+    background: #03162e;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #00abf0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #081b29;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #00abf0;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #b0c4de;
+    line-height: 1.6;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo">Aparna.</a>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#skills">Skills</a>
+				<a href="#experience">Experience</a>
+				<a href="#achievments">Achievments</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <section class="hero">
+            <h1>Hi, I'm Aparna Tiwari</h1>
+            <p>Software Engineer | AI/ML Enthusiast | Innovator | Creator | Leader</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="assets/cv.pdf" class="btn">View CV</a>
+            </div>
+        </section>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="bx bxl-python" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>Python</h3>
+                </div>
+                
+				<div class="card">
+                    <i class="bx bxl-aws" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>Amazon Web Services</h3>
+                </div>
+				<div class="card">
+					<i class="bx bxs-brain" style="font-size: 50px; color: #00abf0;"></i>
+					<h3>Machine Learning</h3>
+				</div>
+				<div class="card">
+					<i class="bx bx-chart" style="font-size: 50px; color: #00abf0;"></i>
+					<h3>Data Science</h3>
+				</div>
+                <div class="card">
+                    <i class="bx bxl-html5" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>HTML</h3>
+                </div>
+                <div class="card">
+                    <i class="bx bxl-css3" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>CSS</h3>
+                </div>
+                <div class="card">
+                    <i class="bx bxs-data" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>MySQL</h3>
+                </div>
+              
+                <div class="card">
+                    <i class="bx bx-server" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>SQL</h3>
+                </div>
+                <div class="card">
+                    <i class="bx bxl-git" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>Git/GitHub</h3>
+                </div>
+                <div class="card">
+                    <i class="bx bx-laptop" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>XAMPP</h3>
+                </div>
+                <div class="card">
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" style="width: 50px; height: 50px; margin-bottom: 15px;">
+                    <i class="bx bxl-linux" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>Linux</h3>
+                </div>
+                <div class="card">
+				<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" alt="Ubuntu" style="width: 50px; height: 50px; margin-bottom: 15px;">
+                    <i class="bx bxl-ubuntu" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>Ubuntu</h3>
+                </div>
+            </div>
+        </section>
+		<section id="experience" class="experience">
+    <h2>Experience</h2>
+    <div>
+        <div class="card">
+		<img src="assets/drdo.png" alt="DRDO">
+            <div class="card-content">
+                <h3>STUDENT INTERN (AI/ML) - DRDO</h3>
+                <p><strong>(SEP 2024 - ONGOING) | PUNE</strong></p>
+                <p>Working on AI/ML datasets for model optimization and predictive analysis. As well as worked on SAM model.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="bx bx-building-house" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>NEUROFIX - MENTAL HEALTH APP</h3>
+                    <p>The NEUROFIX app provides mental health resources, assessment tools, goal-setting features, teletherapy sessions, self-help exercises, and support using AI and ML for efficient counseling.</p>
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+                <div class="card">
+                    <i class="bx bx-cloud" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>STARSCOPE: PERSONALIZED HOROSCOPE PREDICTION</h3>
+                    <p>AI, prompt-engineering techniques, and userfriendly interface tools are being used to create intricate algorithms for horoscope forecasts and zodiac art creation.</p>
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+                <div class="card">
+                    <i class="bx bx-rocket" style="font-size: 50px; color: #00abf0;"></i>
+                    <h3>SALES DASHBOARD USING MICROSOFT POWER BI </h3>
+                    <p>Created an interactive sales dashboard to analyze revenue growth, product performance, and regional sales metrics, including key metrics by segment, payment mode, category, and subcategory.</p>
+                    <a href="#" class="btn">GitHub</a>
+                </div>
+            </div>
+        </section>
+		
+		
+		
+		
+<section id="achievments" class="experience">
+    <h2>ACHIEVEMENTS</h2>
+    <div>
+        <div class="card">
+            <div class="card-content">
+                <h3>Smart India Hackathon 2023 Finalist</h3>
+                <p>Led the team to the final stage.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h3>MIC, MHRD</h3>
+                <p>Innovation, Design, and Entrepreneurship (IDE) Bootcamp Participant (2024)</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <h3>Google Developer Group</h3>
+                <p>Core Lead at Google Developer Student Club (Sponsorship & Outreach)</p>
+            </div>
+        </div>
+		<div class="card">
+            <div class="card-content">
+                <h3>Academic Excellence</h3>
+                <p>2nd Year Department Topper (IT, SPPU)</p>
+            </div>
+        </div>
+    </div>
+</section>
+		
+		
+		
+
+		
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem; color: #b0c4de;">I'd love to hear from you! Feel free to reach out using the form below.</p>
+    <form>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <input type="text" placeholder="Your Name" required style="flex: 1; min-width: 200px;">
+            <input type="email" placeholder="Your Email" required style="flex: 1; min-width: 200px;">
+        </div>
+        <textarea placeholder="Your Message" rows="5" required style="margin-top: 15px;"></textarea>
+        <button type="submit" style="margin-top: 15px;">Send Message</button>
+    </form>
+    <div style="text-align: center; margin-top: 20px;">
+        <p>Or connect with me on:</p>
+        <div style="display: flex; justify-content: center; gap: 15px;">
+            <a href="https://www.linkedin.com/in/aparna-tiwari-695aa224b" style="color: #00abf0; font-size: 1.5rem;"><i class="bx bxl-linkedin"></i></a>
+            <a href="#" style="color: #00abf0; font-size: 1.5rem;"><i class="bx bxl-twitter"></i></a>
+            <a href="https://github.com/AparnaTiwari27" style="color: #00abf0; font-size: 1.5rem;"><i class="bx bxl-github"></i></a>
+        </div>
+    </div>
+</section>
+
+    </div>
+</body>
+</html>
